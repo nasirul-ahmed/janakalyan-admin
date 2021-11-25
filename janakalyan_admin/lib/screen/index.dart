@@ -12,8 +12,6 @@ class Index extends StatelessWidget {
       home: const Splash(),
       
       routes: {
-        // '/dashboard': (context) => const DashBoard(),
-        // '/login': (context) => const Login(),
         Splash.id : (context) => const Splash(),
       },
       initialRoute: Splash.id,
@@ -31,7 +29,9 @@ class Splash extends StatefulWidget {
 
 class _SplashState extends State<Splash> {
   void setTimer() {
-    Timer(const Duration(seconds: 3), () => {navigateUser()});
+    Timer(const Duration(seconds: 3), () => {
+      navigateUser()
+      });
   }
 
   void navigateUser() async {

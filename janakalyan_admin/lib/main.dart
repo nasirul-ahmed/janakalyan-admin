@@ -1,10 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_secure_storage/flutter_secure_storage.dart';
-import 'package:janakalyan_admin/screen/homescreen/dashboard.dart';
 import 'package:janakalyan_admin/screen/index.dart';
-import 'package:janakalyan_admin/screen/login.dart';
-import 'package:janakalyan_admin/utils/secure_storage.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,10 +11,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      title: 'Janakalyan Admin',
-      home: Index(),
-    );
+    return const Index();
   }
 }
 

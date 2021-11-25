@@ -47,7 +47,7 @@ class _LoginState extends State<Login> {
         Map<String, dynamic> token = jsonDecode(res.body);
         if (token.isNotEmpty) {
           
-          await storage.write(key: "token", value: token["token"]);
+          await pref.setString("token", token["token"]);
           await pref.setBool('isLogged', true);
           await pref.setInt('collectorId', token["id"]);
           await pref.setString('email', token["email"]);
