@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:html';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
@@ -51,7 +52,7 @@ class _LoginState extends State<Login> {
           await pref.setBool('isLogged', true);
           await pref.setInt('collectorId', token["id"]);
           await pref.setString('email', token["email"]);
-
+          print(token["token"]);
           Navigator.pushAndRemoveUntil(context,
               MaterialPageRoute(builder: (_) =>const DashBoard()), (route) => false);
         }

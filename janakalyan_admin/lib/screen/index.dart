@@ -29,7 +29,7 @@ class Splash extends StatefulWidget {
 
 class _SplashState extends State<Splash> {
   void setTimer() {
-    Timer(const Duration(seconds: 3), () => {
+    Timer(const Duration(seconds: 1), () => {
       navigateUser()
       });
   }
